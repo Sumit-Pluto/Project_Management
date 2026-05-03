@@ -1,0 +1,23 @@
+{
+  "name": "team-task-manager",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Full-stack team task manager with projects, roles, assignments, and progress tracking.",
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w apps/api\" \"npm run dev -w apps/web\"",
+    "build": "npm run build -w apps/web && npm run build -w apps/api",
+    "start": "npm run start -w apps/api",
+    "lint": "npm run lint -w apps/api && npm run lint -w apps/web",
+    "typecheck": "npm run typecheck -w apps/api && npm run typecheck -w apps/web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

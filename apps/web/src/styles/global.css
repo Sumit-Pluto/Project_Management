@@ -1,0 +1,610 @@
+:root {
+  color: #17211d;
+  background: #f5f7f4;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.shell {
+  min-height: 100vh;
+}
+
+.topbar {
+  align-items: center;
+  background: #ffffff;
+  border-bottom: 1px solid #dfe7dd;
+  display: flex;
+  justify-content: space-between;
+  min-height: 72px;
+  padding: 0 28px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.brand,
+.userPill,
+.panelHeader,
+.sideTitle,
+.taskMeta,
+.statusControls,
+.inlineForm,
+.segmented,
+.promiseList span {
+  align-items: center;
+  display: flex;
+}
+
+.brand {
+  gap: 12px;
+}
+
+.brandMark,
+.statIcon {
+  align-items: center;
+  background: #e7f3ee;
+  border: 1px solid #cce0d7;
+  border-radius: 8px;
+  color: #13725c;
+  display: inline-flex;
+  height: 38px;
+  justify-content: center;
+  width: 38px;
+}
+
+.brand div,
+.memberRow div {
+  display: grid;
+  gap: 3px;
+}
+
+.brand span,
+.memberRow span,
+.muted,
+.compactTask span,
+.projectRow small,
+.authCopy p,
+.sectionHeader p,
+.taskCard p {
+  color: #66736e;
+}
+
+.userPill {
+  background: #f3f6f2;
+  border: 1px solid #dfe7dd;
+  border-radius: 999px;
+  gap: 10px;
+  padding: 7px 8px 7px 14px;
+}
+
+.iconButton {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #d9e2d7;
+  border-radius: 8px;
+  color: #24302b;
+  display: inline-flex;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.authLayout {
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(19, 114, 92, 0.06), transparent 42%),
+    #f5f7f4;
+  display: flex;
+  min-height: 100vh;
+  padding: 28px;
+}
+
+.authPanel {
+  background: #ffffff;
+  border: 1px solid #dfe7dd;
+  border-radius: 8px;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1fr 420px;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 30px;
+  width: 100%;
+}
+
+.authCopy {
+  align-self: center;
+  max-width: 500px;
+}
+
+.eyebrow {
+  color: #0b6b57;
+  font-size: 0.82rem;
+  font-weight: 750;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.02;
+  margin-top: 10px;
+}
+
+h2 {
+  font-size: 1.35rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+.authCopy p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-top: 18px;
+}
+
+.promiseList {
+  display: grid;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.promiseList span {
+  gap: 8px;
+}
+
+.authForm,
+.stackForm {
+  display: grid;
+  gap: 14px;
+}
+
+.authForm {
+  border-left: 1px solid #e4ebe2;
+  padding-left: 28px;
+}
+
+label {
+  color: #3a4641;
+  display: grid;
+  font-size: 0.9rem;
+  font-weight: 650;
+  gap: 7px;
+}
+
+input,
+select,
+textarea {
+  background: #ffffff;
+  border: 1px solid #ced9cb;
+  border-radius: 8px;
+  color: #17211d;
+  min-height: 42px;
+  outline: none;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+textarea {
+  min-height: 84px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1a866a;
+  box-shadow: 0 0 0 3px rgba(26, 134, 106, 0.14);
+}
+
+.segmented {
+  background: #eef4eb;
+  border: 1px solid #d9e4d6;
+  border-radius: 8px;
+  gap: 4px;
+  padding: 4px;
+}
+
+.segmented button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  color: #52605a;
+  display: flex;
+  flex: 1;
+  gap: 7px;
+  justify-content: center;
+  min-height: 36px;
+}
+
+.segmented button.active,
+.statusControls button.active {
+  background: #ffffff;
+  color: #0f6b56;
+  font-weight: 750;
+}
+
+.primaryButton,
+.outlineButton {
+  align-items: center;
+  border-radius: 8px;
+  display: inline-flex;
+  font-weight: 750;
+  gap: 8px;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 15px;
+}
+
+.primaryButton {
+  background: #13725c;
+  border: 1px solid #13725c;
+  color: #ffffff;
+}
+
+.outlineButton {
+  background: #ffffff;
+  border: 1px solid #cad8c7;
+  color: #21302a;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  min-height: calc(100vh - 72px);
+}
+
+.sidebar {
+  background: #fbfcfa;
+  border-right: 1px solid #dfe7dd;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 22px;
+}
+
+.sideTitle,
+.panelHeader {
+  color: #24302b;
+  font-weight: 800;
+  gap: 9px;
+}
+
+.projectList {
+  display: grid;
+  gap: 8px;
+}
+
+.projectRow {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  display: grid;
+  gap: 5px;
+  padding: 12px;
+  text-align: left;
+}
+
+.projectRow.active,
+.projectRow:hover {
+  background: #eef6f2;
+  border-color: #cce1d7;
+}
+
+.content {
+  display: grid;
+  gap: 20px;
+  padding: 24px;
+}
+
+.dashboardGrid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(140px, 1fr));
+}
+
+.statCard,
+.panel,
+.emptyState {
+  background: #ffffff;
+  border: 1px solid #dfe7dd;
+  border-radius: 8px;
+}
+
+.statCard {
+  align-items: center;
+  display: flex;
+  gap: 13px;
+  min-height: 92px;
+  padding: 18px;
+}
+
+.statCard strong {
+  display: block;
+  font-size: 1.7rem;
+}
+
+.statCard span:last-child {
+  color: #66736e;
+}
+
+.projectBoard {
+  display: grid;
+  gap: 16px;
+}
+
+.sectionHeader {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.rolePill,
+.badge {
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 5px 9px;
+  text-transform: capitalize;
+}
+
+.rolePill {
+  background: #eaf1ff;
+  color: #2456a6;
+}
+
+.boardColumns,
+.activityGrid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 330px 1fr;
+}
+
+.panel {
+  padding: 18px;
+}
+
+.memberList,
+.taskList,
+.compactList {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.memberRow,
+.compactTask {
+  align-items: center;
+  border-bottom: 1px solid #edf1eb;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 10px;
+}
+
+.memberRow small {
+  color: #2456a6;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.inlineForm {
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.fieldWithIcon {
+  position: relative;
+  width: 100%;
+}
+
+.fieldWithIcon svg {
+  color: #7a8580;
+  left: 11px;
+  position: absolute;
+  top: 13px;
+}
+
+.fieldWithIcon input {
+  padding-left: 34px;
+}
+
+.taskForm {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: minmax(180px, 1fr) 160px 120px 150px auto;
+  margin-top: 14px;
+}
+
+.taskCard {
+  background: #fbfcfa;
+  border: 1px solid #e1e8df;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+}
+
+.taskTitleRow {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.taskMeta {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  background: #edf1eb;
+  color: #43514b;
+}
+
+.status-done {
+  background: #dff3e8;
+  color: #116246;
+}
+
+.status-in_progress {
+  background: #fff1cf;
+  color: #855a03;
+}
+
+.status-todo {
+  background: #eaf1ff;
+  color: #2456a6;
+}
+
+.priority-high {
+  background: #ffe5df;
+  color: #9b2f17;
+}
+
+.priority-medium {
+  background: #fff1cf;
+  color: #855a03;
+}
+
+.priority-low {
+  background: #e7f3ee;
+  color: #13725c;
+}
+
+.statusControls {
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.statusControls button {
+  background: #ffffff;
+  border: 1px solid #dbe4d8;
+  border-radius: 8px;
+  min-height: 32px;
+  padding: 0 10px;
+}
+
+.dangerText {
+  color: #a33b24;
+}
+
+.notice,
+.errorText {
+  background: #fff1cf;
+  border: 1px solid #efd391;
+  border-radius: 8px;
+  color: #7b5200;
+  padding: 10px 12px;
+}
+
+.errorText {
+  background: #ffe5df;
+  border-color: #f4c0b2;
+  color: #8e2811;
+}
+
+.emptyState {
+  align-items: center;
+  color: #66736e;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  min-height: 260px;
+  padding: 28px;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .workspace,
+  .boardColumns,
+  .activityGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid #dfe7dd;
+  }
+
+  .dashboardGrid {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+
+  .taskForm {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .topbar,
+  .sectionHeader,
+  .memberRow {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .authPanel {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .authForm {
+    border-left: 0;
+    border-top: 1px solid #e4ebe2;
+    padding-left: 0;
+    padding-top: 22px;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  .dashboardGrid,
+  .taskForm {
+    grid-template-columns: 1fr;
+  }
+
+  .inlineForm {
+    align-items: stretch;
+    display: grid;
+  }
+}
